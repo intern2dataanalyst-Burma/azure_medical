@@ -1,0 +1,11 @@
+{
+  "name": "azure-medical",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix api run build && npm --prefix frontend run build",
+    "test": "npm --prefix api run test && npm --prefix frontend run test",
+    "start:api": "npm --prefix api run dev",
+    "start:frontend": "npm --prefix frontend run dev"
+  }
+}

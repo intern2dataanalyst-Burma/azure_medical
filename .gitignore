@@ -1,0 +1,12 @@
+node_modules/
+api/node_modules/
+frontend/node_modules/
+**/local.settings.json
+api/dist/
+frontend/dist/
+api/.azurefunctions/
+.env
+.env.*
+!.env.example
+**/.DS_Store
+coverage/

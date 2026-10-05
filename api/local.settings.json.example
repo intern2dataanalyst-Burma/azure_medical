@@ -1,0 +1,18 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "AZURE_FUNCTIONS_ENVIRONMENT": "Development",
+    "STORAGE_CONNECTION_STRING": "UseDevelopmentStorage=true",
+    "GRAPH_TENANT_ID": "",
+    "GRAPH_CLIENT_ID": "",
+    "GRAPH_CLIENT_SECRET": "",
+    "SHAREPOINT_SITE_ID": "",
+    "SHAREPOINT_DRIVE_ID": "",
+    "EXCEL_FILE_ID": "",
+    "RAW_REPORTS_FOLDER_ID": "",
+    "ORGANIZED_REPORTS_FOLDER_ID": "",
+    "REGIONAL_SOURCE_FILE_IDS": ""
+  }
+}

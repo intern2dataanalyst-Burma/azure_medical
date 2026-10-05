@@ -1,0 +1,13 @@
+{
+  "routes": [
+    { "route": "/api/getEmployeeData", "allowedRoles": ["authenticated"] },
+    { "route": "/api/exportReports", "allowedRoles": ["authenticated"] },
+    { "route": "/api/accessControl", "allowedRoles": ["admin"] },
+    { "route": "/api/syncRegionalData", "allowedRoles": ["admin"] },
+    { "route": "/api/runMasterDriveSync", "allowedRoles": ["admin"] }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["*.{css,js,json,ico,png,jpg,jpeg,gif,svg}"]
+  }
+}
