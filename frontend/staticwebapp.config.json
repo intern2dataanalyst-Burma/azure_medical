@@ -1,13 +1,24 @@
 {
   "routes": [
-    { "route": "/api/getEmployeeData", "allowedRoles": ["authenticated"] },
-    { "route": "/api/exportReports", "allowedRoles": ["authenticated"] },
     { "route": "/api/accessControl", "allowedRoles": ["admin"] },
     { "route": "/api/syncRegionalData", "allowedRoles": ["admin"] },
-    { "route": "/api/runMasterDriveSync", "allowedRoles": ["admin"] }
+    { "route": "/api/runMasterDriveSync", "allowedRoles": ["admin"] },
+    { "route": "/api/getEmployeeData", "allowedRoles": ["authenticated"] },
+    { "route": "/api/exportReports", "allowedRoles": ["authenticated"] },
+    { "route": "/api/*", "allowedRoles": ["authenticated"] },
+    { "route": "/*", "allowedRoles": ["authenticated"] }
   ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/.auth/login/aad?post_login_redirect_uri=.referrer",
+      "statusCode": 302
+    }
+  },
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["*.{css,js,json,ico,png,jpg,jpeg,gif,svg}"]
+    "exclude": ["/api/*", "/.auth/*", "*.{css,js,json,ico,png,jpg,jpeg,gif,svg}"]
+  },
+  "platform": {
+    "apiRuntime": "node:22"
   }
 }
